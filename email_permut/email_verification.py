@@ -37,7 +37,7 @@ def get_ip():
 def renew_tor_connection():
     """Renouveler le circuit Tor."""
     with Controller.from_port(port=9051) as controller:
-        controller.authenticate(password="D_fAe,AioC1m3H(BPw7J:GjJ;")  # Remplace par le mot de passe de /etc/tor/torrc/
+        controller.authenticate(password="remplace par le mot de passe dans que tu as choisis dans le fichier torrc")  # Remplace par le mot de passe de /etc/tor/torrc/
         controller.signal(Signal.NEWNYM)
         time.sleep(3)  # Pause pour permettre à Tor de mettre en place le nouveau circuit
 
